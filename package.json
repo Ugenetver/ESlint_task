@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "name": "eslint-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "4.15.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
