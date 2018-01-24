@@ -13,4 +13,5 @@ console.log(results);
 const resultsAsJSON = JSON.parse(cli.getFormatter('json')(report.results));
 const messagesString = stringify(resultsAsJSON[0].messages);
 const messageHash = createHash('md5').update(messagesString).digest('hex');
+console.log(messageHash);
 console.log(HASH === messageHash ? 'SUCCESS' : 'FAIL');
