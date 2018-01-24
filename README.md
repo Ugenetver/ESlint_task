@@ -3,7 +3,7 @@
 1. run `npm install` in the project folder
 1. add rules to `.eslintrc` file
 1. run `npm start` to check rules
-1. if you see `valid: true` at the end of the output, you can sent your solution to a mentor.
+1. if you see `SUCCESS` at the end of the output, you can sent your solution to a mentor.
 
 ### Add rules to .eslintrc according to the following codestyle:
 
