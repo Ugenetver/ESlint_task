@@ -9,7 +9,7 @@
     "start": "node index.js"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "eslint": "4.15.0",
     "eslint-plugin-import": "^2.8.0"
