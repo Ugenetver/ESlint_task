@@ -18,7 +18,7 @@
 1. enforce the location of arrow function bodies with implicit returns
 1. use 4 spaces for indent
 1. require a space before & after keywords
-1. maximum line length = 80, ignore for strings
+1. maximum line length = 80, ignore for strings and comments
 1. disallow the omission of parentheses when invoking a constructor with no arguments
 1. disallow mixed spaces and tabs for indentation
 1. disallow use of chained assignment expressions
@@ -31,25 +31,10 @@ _"for..in loops iterate over the entire prototype chain, which is virtually neve
 1. disallow tab characters entirely
 1. disallow dangling underscores in identifiers **everywhere**
 1. disallow a newline before a single-line statement
-1. require operator at the beginning of the line in multiline statements
-    ```javascript
-    // good
-    var fullHeight = borderTop
-                   + innerHeight
-                   + borderBottom;
-    ```
 1. disallow padding within blocks
-    ```javascript
-    //bad
-    if (a) {
-    
-        b();
-    
-    }
-    ```
 1. use only single quotes
 1. require semicolons at the end of statements
-1. enforce spacing after semicolons
+1. disallow spaces before semicolons
 1. enforce that semicolons are at the end of statements
 1. require space before blocks
 1. require space before opening parenthesis in anonymous and arrow functions. Exception: named functions.

@@ -28,7 +28,7 @@ export function defaults( ){
   return object
 }
 
-export function map(array,iteratee) {
+export function map (array,iteratee) {
     let index = i = -1
     const length = array == null ? 0 : array.length
     const result = new Array(length)
