@@ -10,7 +10,7 @@
 1. enforce one true brace style
 1. require camel case names
 1. enforce spacing after comma
-1. require a comma after and on the same line as an array element, object property, or variable declaration
+1. require a comma after and on the same line **everywhere**
 1. disallow padding inside computed properties
 1. enforce newline at the end of file, with no multiple empty lines
 1. enforce spacing between functions and their invocations
@@ -22,7 +22,7 @@
 1. disallow the omission of parentheses when invoking a constructor with no arguments
 1. disallow mixed spaces and tabs for indentation
 1. disallow use of chained assignment expressions
-1. disallow multiple empty lines and allow only one newline at the end
+1. disallow multiple empty lines (more than one) and allow only one newline at the end
 1. disallow use of the Object constructor
 1. disallow use of unary operators, ++ and --
 1. disallow `for..in` syntax and show custom error:

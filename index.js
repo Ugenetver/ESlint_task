@@ -2,7 +2,7 @@ const {createHash} = require('crypto');
 const {CLIEngine} = require('eslint');
 const stringify = require('json-stringify-deterministic');
 
-const HASH = '76056c28b5653e6574216f6359e1ada8';
+const HASH = '1675edd44f4e848990c8773d1ecb2b1a';
 
 const cli = new CLIEngine();
 const report = cli.executeOnFiles(['src/']);
