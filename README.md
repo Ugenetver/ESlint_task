@@ -13,7 +13,6 @@
 1. require a comma after and on the same line **everywhere**
 1. disallow padding inside computed properties
 1. enforce newline at the end of file, with no multiple empty lines
-1. enforce spacing between functions and their invocations
 1. (warn) require function expressions to have a name
 1. enforce the location of arrow function bodies with implicit returns
 1. use 4 spaces for indent
