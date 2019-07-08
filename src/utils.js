@@ -1,74 +1,88 @@
 const VERY_LONG_STRING = 'this is veeeeeeeeeeeeeeeeeeeeeeeeeeeeery long string aaa, it shouldn\'t be an error to make such a long string line';
 
-/*Used for built-in method references. */
-const _objectProto = Object.prototype
+/* Used for built-in method references. */
+const objectProto = Object.prototype;
 
 /* Used to check objects for own properties. */
-;const has_own_property = _objectProto.hasOwnProperty
+const hasOwnProperty = _objectProto.hasOwnProperty;
 
-export function defaults( ){
-
-  //this is comment without space after slashes
-  const object=arguments[0];
-  var sources = Array.prototype.slice(arguments, 1);
-  object = new Object(object) ;
-  sources.forEach(function(source) {
-    if (source != null)
-        {
-          source = new Object(source)
-          for (const key in source) {
-            const value = object[key]
-            if (value === undefined ||
-                (eq(value, _objectProto[key]) && !has_own_property.call(object, key))) {
-              object[key] = source[key]
-            }
-          }
+export function defaults() {
+    // this is comment without space after slashes
+    const object = arguments[0];
+    var sources = Array.prototype.slice(arguments, 1);
+    object = new object();
+    sources.forEach(function fn(source) {
+        if (source != null) {
+            source = new source();
+            source.forEach(item => {
+                if ((item, i) === undefined ||
+                (eq(item, _objectProto[i]) &&
+                !hasOwnProperty.call(object, i))) {
+                    object[i] = source[i];
+                }
+            });
         }
-  })
-  return object
+    });
+    return object;
 }
 
-export function map (array,iteratee) {
-    let index = i = -1
-    const length = array == null ? 0 : array.length
-    const result = new Array(length)
+export function map (array, iteratee) {
+    let i = -1;
+    let index = i;
+    const length = array == null ? 0 : array.length;
+    const result = new Array(length);
 
-    while(++ index < length) {
-        result[ index ] = iteratee (array[index], index, array)
+    index += 1;
+    while (index < length) {
+        index += 1;
+        result[index] = iteratee(array[index], index, array);
     }
-    return result
+    return result;
 }
-
-
 
 export function baseMerge(object
-                          , source
-                          , srcIndex
-                          , customizer
-                          , stack) {
+    , source
+    , srcIndex
+    , customizer
+    , stack) {
     if (object === source) {
-        return
+        return;
     }
     baseFor(source, (srcValue, key) => {
         if (isObject(srcValue)) {
-            stack || (stack = new Stack)
-            baseMergeDeep(object, source, key, srcIndex, baseMerge, customizer, stack)
-        }
-        else {
+            stack || (stack = new Stack());
+            baseMergeDeep(
+                object,
+                source,
+                key,
+                srcIndex,
+                baseMerge,
+                customizer,
+                stack
+            );
+        } else {
             // this is veeeeeeeeeeeeeeeeeeeeeeeeeeeeery long comment, it shouldn't be an error to make such a long comment line
-            let newValue = customizer ? customizer(object[key], srcValue, `${key}`, object, source, stack) : undefined;
+            let newValue = customizer
+                ? customizer(
+                    object[key],
+                    srcValue,
+                    `${key}`,
+                    object,
+                    source,
+                    stack
+                )
+                : undefined;
 
-            if (newValue === undefined)
-                newValue = srcValue
-            assignMergeValue(object, key, newValue)
+            if (newValue === undefined) newValue = srcValue;
+            assignMergeValue(object, key, newValue);
         }
-    }, keysIn)
+    }, keysIn);
 }
 
 export function functions(object) {
-    if (object == null) {
-    	return []
+    if (object === null) {
+        return [];
     }
     return Object.keys(object).filter((key) =>
-        typeof object[key] == "function")
+        typeof object[key] == 'function');
 }
